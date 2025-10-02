@@ -27,7 +27,6 @@ public class PersonController {
 		personService.savePerson(person);
 	}
 	
-	@ResponseStatus(HttpStatus.CREATED)
 	@GetMapping("/{pageNumber}/{pageSize}")
 	public ResponseEntity<?> list(@PathVariable(name = "pageNumber", required = true) int pageNumber, 
 			@PathVariable(name = "pageSize", required = true) int pageSize) {
